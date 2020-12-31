@@ -7,6 +7,15 @@ music.preload = 'auto';
 music.src = './sound/garagara2.mp3';
 music.load();
 
+const osaisenEntityEl = document.createElement('a-entity');
+osaisenEntityEl.setAttribute('static-body', '');
+osaisenEntityEl.setAttribute('id', 'osaisen');
+osaisenEntityEl.setAttribute('obj-model', 'obj:#osaisen-obj; mtl:#osaisen-mtl;');
+osaisenEntityEl.setAttribute('position', '0 0 -10');
+osaisenEntityEl.setAttribute('scale', '2 2 2');
+osaisenEntityEl.setAttribute('rotation', '0 0 0');
+sceneEl.appendChild(osaisenEntityEl);
+
 for (var i = 0; i < 30; i++) {
   const toriiEntityEl = document.createElement('a-entity');
   toriiEntityEl.setAttribute('static-body', '');
@@ -46,7 +55,7 @@ button.addEventListener('click', event => {
     textEntityEl.setAttribute('obj-model', `obj:#${omikujiText}-obj; mtl:#${omikujiText}-mtl;`);
     textEntityEl.setAttribute('position', '0 0 -480');
     textEntityEl.setAttribute('animation', 'property: position; to: 0 8 -10; dur: 2000; easing: linear; loop: false');
-    textEntityEl.setAttribute('scale', '10 10 10');
+    textEntityEl.setAttribute('scale', '20 20 20');
     textEntityEl.setAttribute('rotation', '0 0 0');
     sceneEl.appendChild(textEntityEl);
   }

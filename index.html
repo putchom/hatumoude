@@ -32,24 +32,17 @@
         <a-asset-item id="kyo-obj" src="model/kyo/kyo.obj"></a-asset-item>
         <a-asset-item id="kyo-mtl" src="model/kyo/kyo.mtl"></a-asset-item>
       </a-assets>
-
-      <!-- 賽銭箱左 -->
-      <a-box static-body color="white" width="0.5" depth="3.5" height="4" position="-3.5 3 -10"></a-box>
-      <!-- 賽銭箱右 -->
-      <a-box static-body color="white" width="0.5" depth="3.5" height="4" position="3.5 3 -10"></a-box>
-      <!-- 賽銭箱背面 -->
-      <a-box static-body color="white" width="7.5" depth="0.5" height="4" position="0 3 -11.5"></a-box>
-      <!-- 賽銭箱前面 -->
-      <a-box static-body color="white" width="7.5" depth="0.5" height="4" position="0 3 -8.5"></a-box>
-      <!-- 賽銭箱下 -->
-      <a-box static-body color="white" width="8" depth="4" height="0.5" position="0 1 -10"></a-box>
+      <a-assets>
+        <a-asset-item id="osaisen-obj" src="model/osaisen/osaisen.obj"></a-asset-item>
+        <a-asset-item id="osaisen-mtl" src="model/osaisen/osaisen.mtl"></a-asset-item>
+      </a-assets>
 
       <!-- 床 -->
-      <a-box static-body color="gray" width="1000" depth="1000" height="1" position="0 0 0"></a-box>
+      <a-box static-body color="white" width="1000" depth="1000" height="1" position="0 0 0"></a-box>
       <a-sky color="white"></a-sky>
-      <a-camera id="camera" position="0 6 0"></a-camera>
+      <a-camera id="camera" position="0 6 2"></a-camera>
     </a-scene>
-    <div id="throw-osaisen-button" style="background-color: white; padding: 1rem; cursor: pointer; position: absolute; bottom: 1rem; left: 1rem; font-weight: bold;">
+    <div id="throw-osaisen-button" style="border-radius: 0.5rem; color: white; background-color: black; padding: 1rem; cursor: pointer; position: absolute; bottom: 1rem; left: 1rem; font-weight: bold;">
       おみくじをひく
     </div>
     <script src="component.js"></script>
