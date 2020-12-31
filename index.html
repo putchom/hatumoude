@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>デジタル初詣</title>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <a-scene physics="debug: false;">
+      <a-assets>
+        <a-asset-item id="torii-obj" src="model/torii/torii.obj"></a-asset-item>
+        <a-asset-item id="torii-mtl" src="model/torii/torii.mtl"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="goen-obj" src="model/goen/goen.obj"></a-asset-item>
+        <a-asset-item id="goen-mtl" src="model/goen/goen.mtl"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="daikichi-obj" src="model/daikichi/daikichi.obj"></a-asset-item>
+        <a-asset-item id="daikichi-mtl" src="model/daikichi/daikichi.mtl"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="chukichi-obj" src="model/chukichi/chukichi.obj"></a-asset-item>
+        <a-asset-item id="chukichi-mtl" src="model/chukichi/chukichi.mtl"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="shokichi-obj" src="model/shokichi/shokichi.obj"></a-asset-item>
+        <a-asset-item id="shokichi-mtl" src="model/shokichi/shokichi.mtl"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="kyo-obj" src="model/kyo/kyo.obj"></a-asset-item>
+        <a-asset-item id="kyo-mtl" src="model/kyo/kyo.mtl"></a-asset-item>
+      </a-assets>
+
+      <!-- 賽銭箱左 -->
+      <a-box static-body color="white" width="0.5" depth="3.5" height="4" position="-3.5 3 -10"></a-box>
+      <!-- 賽銭箱右 -->
+      <a-box static-body color="white" width="0.5" depth="3.5" height="4" position="3.5 3 -10"></a-box>
+      <!-- 賽銭箱背面 -->
+      <a-box static-body color="white" width="7.5" depth="0.5" height="4" position="0 3 -11.5"></a-box>
+      <!-- 賽銭箱前面 -->
+      <a-box static-body color="white" width="7.5" depth="0.5" height="4" position="0 3 -8.5"></a-box>
+      <!-- 賽銭箱下 -->
+      <a-box static-body color="white" width="8" depth="4" height="0.5" position="0 1 -10"></a-box>
+
+      <!-- 床 -->
+      <a-box static-body color="gray" width="1000" depth="1000" height="1" position="0 0 0"></a-box>
+      <a-sky color="white"></a-sky>
+      <a-camera id="camera" position="0 6 0"></a-camera>
+    </a-scene>
+    <div id="throw-osaisen-button" style="background-color: white; padding: 1rem; cursor: pointer; position: absolute; bottom: 1rem; left: 1rem; font-weight: bold;">
+      おみくじをひく
+    </div>
+    <script src="component.js"></script>
+  </body>
+</html>

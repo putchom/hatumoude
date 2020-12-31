@@ -1,0 +1,22 @@
+{
+  "name": "hatumoude",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo --live --verbose --port 3000 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/putchom/hatumoude.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/putchom/hatumoude/issues"
+  },
+  "homepage": "https://github.com/putchom/hatumoude#readme",
+  "devDependencies": {
+    "budo": "^11.6.4"
+  }
+}
