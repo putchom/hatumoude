@@ -29,7 +29,7 @@ button.addEventListener('click', event => {
     goenEntityEl.setAttribute('id', 'goen');
     goenEntityEl.setAttribute('obj-model', 'obj:#goen-obj; mtl:#goen-mtl;');
     goenEntityEl.setAttribute('position', `${getRandomInt(-5, 5)} 20 ${getRandomInt(-10, -8)}`);
-    goenEntityEl.setAttribute('scale', '1 1 1');
+    goenEntityEl.setAttribute('scale', '10 10 10');
     goenEntityEl.setAttribute('rotation', '0 0 0');
     goenFragment.appendChild(goenEntityEl);
   }
