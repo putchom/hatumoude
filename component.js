@@ -7,7 +7,7 @@ music.preload = 'auto';
 music.src = './sound/garagara2.mp3';
 music.load();
 
-for (var i = 0; i < 30; i++) {
+for (var i = 0; i < 20; i++) {
   const toriiEntityEl = document.createElement('a-entity');
   toriiEntityEl.setAttribute('static-body', '');
   toriiEntityEl.setAttribute('id', 'torii');
@@ -44,7 +44,7 @@ button.addEventListener('click', event => {
     textEntityEl.setAttribute('id', 'omikuji-text');
     textEntityEl.setAttribute('static-body', '');
     textEntityEl.setAttribute('obj-model', `obj:#${omikujiText}-obj; mtl:#${omikujiText}-mtl;`);
-    textEntityEl.setAttribute('position', '0 0 -480');
+    textEntityEl.setAttribute('position', '0 0 -300');
     textEntityEl.setAttribute('animation', 'property: position; to: 0 8 -10; dur: 2000; easing: linear; loop: false');
     textEntityEl.setAttribute('scale', '20 20 20');
     textEntityEl.setAttribute('rotation', '0 0 0');

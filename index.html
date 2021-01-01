@@ -52,6 +52,10 @@
         <a-asset-item id="mochi-obj" src="model/mochi/mochi.obj"></a-asset-item>
         <a-asset-item id="mochi-mtl" src="model/mochi/mochi.mtl"></a-asset-item>
       </a-assets>
+      <a-assets>
+        <a-asset-item id="surisurikun-obj" src="model/surisurikun/surisurikun.obj"></a-asset-item>
+        <a-asset-item id="surisurikun-mtl" src="model/surisurikun/surisurikun.mtl"></a-asset-item>
+      </a-assets>
       <a-entity
         animation="property: position; to: 0 1 -10; loop: true; easing: linear; dur: 100;"
         static-body
@@ -93,6 +97,15 @@
         obj-model="obj:#mochi-obj; mtl:#mochi-mtl;"
         position="-40 0.5 -40"
         scale="20 20 20"
+        rotation="0 0 0">
+      </a-entity>
+      <a-entity
+        animation="property: position; to: 0 1.5 -300; loop: true; easing: linear; dur: 100;"
+        static-body
+        id="surisurikun"
+        obj-model="obj:#surisurikun-obj; mtl:#surisurikun-mtl;"
+        position="0 0.5 -300"
+        scale="2 2 2"
         rotation="0 0 0">
       </a-entity>
       <a-box
