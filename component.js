@@ -7,15 +7,6 @@ music.preload = 'auto';
 music.src = './sound/garagara2.mp3';
 music.load();
 
-const osaisenEntityEl = document.createElement('a-entity');
-osaisenEntityEl.setAttribute('static-body', '');
-osaisenEntityEl.setAttribute('id', 'osaisen');
-osaisenEntityEl.setAttribute('obj-model', 'obj:#osaisen-obj; mtl:#osaisen-mtl;');
-osaisenEntityEl.setAttribute('position', '0 0 -10');
-osaisenEntityEl.setAttribute('scale', '2 2 2');
-osaisenEntityEl.setAttribute('rotation', '0 0 0');
-sceneEl.appendChild(osaisenEntityEl);
-
 for (var i = 0; i < 30; i++) {
   const toriiEntityEl = document.createElement('a-entity');
   toriiEntityEl.setAttribute('static-body', '');
@@ -32,7 +23,7 @@ sceneEl.appendChild(toriiFragment);
 button.addEventListener('click', event => {
   const goenFragment = document.createDocumentFragment();
 
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 20; i++) {
     const goenEntityEl = document.createElement('a-entity');
     goenEntityEl.setAttribute('dynamic-body', '');
     goenEntityEl.setAttribute('id', 'goen');

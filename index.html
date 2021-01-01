@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>デジタル初詣</title>
+    <title>初詣オンライン</title>
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -36,11 +36,70 @@
         <a-asset-item id="osaisen-obj" src="model/osaisen/osaisen.obj"></a-asset-item>
         <a-asset-item id="osaisen-mtl" src="model/osaisen/osaisen.mtl"></a-asset-item>
       </a-assets>
-
-      <!-- 床 -->
-      <a-box static-body color="white" width="1000" depth="1000" height="1" position="0 0 0"></a-box>
+      <a-assets>
+        <a-asset-item id="cow-obj" src="model/cow/cow.obj"></a-asset-item>
+        <a-asset-item id="cow-mtl" src="model/cow/cow.mtl"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="mochi-obj" src="model/mochi/mochi.obj"></a-asset-item>
+        <a-asset-item id="mochi-mtl" src="model/mochi/mochi.mtl"></a-asset-item>
+      </a-assets>
+      <a-entity
+        animation="property: position; to: 0 1 -10; loop: true; easing: linear; dur: 100;"
+        static-body
+        id="osaisen"
+        obj-model="obj:#osaisen-obj; mtl:#osaisen-mtl;"
+        position="0 0 -10"
+        scale="2 2 2"
+        rotation="0 0 0"
+      ></a-entity>
+      <a-entity
+        animation="property: rotation; to: 0 -360 0; loop: true; easing: linear; dur: 1500;"
+        static-body
+        id="cow"
+        obj-model="obj:#cow-obj; mtl:#cow-mtl;"
+        position="16 0.5 -20"
+        scale="0.5 0.5 0.5"
+        rotation="0 0 0">
+      </a-entity>
+      <a-entity
+        animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 1500;"
+        static-body
+        id="cow"
+        obj-model="obj:#cow-obj; mtl:#cow-mtl;"
+        position="-16 0.5 -20"
+        scale="0.5 0.5 0.5"
+        rotation="0 0 0">
+      </a-entity>
+      <a-entity
+        static-body
+        id="mochi"
+        obj-model="obj:#mochi-obj; mtl:#mochi-mtl;"
+        position="40 -0.5 -40"
+        scale="20 20 20"
+        rotation="0 0 0">
+      </a-entity>
+      <a-entity
+        static-body
+        id="mochi"
+        obj-model="obj:#mochi-obj; mtl:#mochi-mtl;"
+        position="-40 0.5 -40"
+        scale="20 20 20"
+        rotation="0 0 0">
+      </a-entity>
+      <a-box
+        static-body
+        color="white"
+        width="1000"
+        depth="1000"
+        height="1"
+        position="0 0 0"
+      ></a-box>
       <a-sky color="white"></a-sky>
-      <a-camera id="camera" position="0 6 2"></a-camera>
+      <a-camera
+        id="camera"
+        position="0 6 2"
+      ></a-camera>
     </a-scene>
     <div id="throw-osaisen-button" style="border-radius: 0.5rem; color: white; background-color: black; padding: 1rem; cursor: pointer; position: absolute; bottom: 1rem; left: 1rem; font-weight: bold;">
       おみくじをひく
